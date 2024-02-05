@@ -1,4 +1,4 @@
-16:38:24 **** Incremental Build of configuration Debug for project Blinking LED With Struct ****
+03:32:06 **** Incremental Build of configuration Debug for project Blinking LED With Struct ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc -o "Blinking LED With Struct.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\STMCodes\Blinking LED With Struct\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blinking LED With Struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -7,52 +7,18 @@ Finished building target: Blinking LED With Struct.elf
 arm-none-eabi-objdump -h -S  Blinking\ LED\ With\ Struct.elf  > "Blinking LED With Struct.list"
 arm-none-eabi-objcopy  -O binary  Blinking\ LED\ With\ Struct.elf  "Blinking LED With Struct.bin"
 arm-none-eabi-size   Blinking\ LED\ With\ Struct.elf 
+Finished building: Blinking LED With Struct.list
+ 
    text	   data	    bss	    dec	    hex	filename
     736	      8	   1568	   2312	    908	Blinking LED With Struct.elf
 Finished building: default.size.stdout
- 
 Finished building: Blinking LED With Struct.bin
-Finished building: Blinking LED With Struct.list
  
  
-16:38:28 **** Incremental Build of configuration Debug for project Blinking LED With Struct ****
+03:32:17 **** Incremental Build of configuration Debug for project Blinking LED With Struct ****
 make -j12 all 
 arm-none-eabi-size   Blinking\ LED\ With\ Struct.elf 
    text	   data	    bss	    dec	    hex	filename
     736	      8	   1568	   2312	    908	Blinking LED With Struct.elf
 Finished building: default.size.stdout
- 
-16:39:19 **** Incremental Build of configuration Debug for project Blinking LED With Struct ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "Blinking LED With Struct.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\STMCodes\Blinking LED With Struct\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blinking LED With Struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Blinking LED With Struct.elf
- 
-arm-none-eabi-objdump -h -S  Blinking\ LED\ With\ Struct.elf  > "Blinking LED With Struct.list"
-arm-none-eabi-objcopy  -O binary  Blinking\ LED\ With\ Struct.elf  "Blinking LED With Struct.bin"
-arm-none-eabi-size   Blinking\ LED\ With\ Struct.elf 
-   text	   data	    bss	    dec	    hex	filename
-    736	      8	   1568	   2312	    908	Blinking LED With Struct.elf
-Finished building: default.size.stdout
- 
-Finished building: Blinking LED With Struct.bin
-Finished building: Blinking LED With Struct.list
- 
- 
-16:40:50 **** Incremental Build of configuration Debug for project Blinking LED With Struct ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "Blinking LED With Struct.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\STMCodes\Blinking LED With Struct\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blinking LED With Struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Blinking LED With Struct.elf
- 
-arm-none-eabi-objdump -h -S  Blinking\ LED\ With\ Struct.elf  > "Blinking LED With Struct.list"
-arm-none-eabi-objcopy  -O binary  Blinking\ LED\ With\ Struct.elf  "Blinking LED With Struct.bin"
-arm-none-eabi-size   Blinking\ LED\ With\ Struct.elf 
-   text	   data	    bss	    dec	    hex	filename
-    736	      8	   1568	   2312	    908	Blinking LED With Struct.elf
-Finished building: default.size.stdout
- 
-Finished building: Blinking LED With Struct.bin
-Finished building: Blinking LED With Struct.list
- 
  
