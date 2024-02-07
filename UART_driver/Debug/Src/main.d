@@ -1,3 +1,3 @@
-Src/main.o: ../Src/main.c ../Inc/customled.h
+Src/main.o: ../Src/main.c ../Inc/custom_memory_map.h
 
-../Inc/customled.h:
+../Inc/custom_memory_map.h:

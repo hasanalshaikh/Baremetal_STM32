@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;UART_driver/Inc/customled.h&apos; to &apos;custom_memory_map.h&apos;" description="Rename resource &apos;customled.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Inc/customled.h" name="custom_memory_map.h" stamp="1707165588103" updateReferences="true"/>
+</session>

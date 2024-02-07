@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Blinking LED With Struct
+BUILD_ARTIFACT_NAME := UART_driver
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX := 
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME).$(BUILD_ARTIFACT_EXTENSION)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Blinking\ LED\ With\ Struct.elf \
+UART_driver.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Blinking\ LED\ With\ Struct.list \
+UART_driver.list \
 
 OBJCOPY_BIN += \
-Blinking\ LED\ With\ Struct.bin \
+UART_driver.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Blinking\ LED\ With\ Struct.elf secondary-outputs
+main-build: UART_driver.elf secondary-outputs
 
 # Tool invocations
-Blinking\ LED\ With\ Struct.elf: $(OBJS) $(USER_OBJS) F:\STMCodes\Blinking\ LED\ With\ Struct\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Blinking LED With Struct.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\STMCodes\Blinking LED With Struct\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blinking LED With Struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+UART_driver.elf: $(OBJS) $(USER_OBJS) F:\STMCodes\UART_driver\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "UART_driver.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\STMCodes\UART_driver\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,13 +70,13 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Blinking\ LED\ With\ Struct.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Blinking LED With Struct.list"
+UART_driver.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "UART_driver.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Blinking\ LED\ With\ Struct.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Blinking LED With Struct.bin"
+UART_driver.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "UART_driver.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
